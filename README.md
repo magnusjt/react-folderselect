@@ -1,6 +1,9 @@
 # react-folderselect
 
 ### What
+
+![alt tag](https://raw.github.com/magnusjt/react-folderselect/master/examples/basic/ex1.png)
+
 Folderselect is a react component for displaying a tree structure similar
 to a file browser. Items from the tree structure can be selected by the user
 by clicking on them. Folderselect also supports:
