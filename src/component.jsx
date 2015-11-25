@@ -189,9 +189,8 @@ export class FolderSelect extends React.Component{
     changeSelected(selected){
         this.setState({selected});
 
-        let nodes = selected.map((id) => {
-            return this.props.nodes[id];
-        });
+        let nodes = selected.map((id) => this.props.nodes[id]);
+        nodes = _.sortBy(nodes, 'text');
 
         this.props.onChangeSelected(nodes);
     }
