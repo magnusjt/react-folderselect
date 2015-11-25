@@ -16,7 +16,7 @@ It's very similar to my other plugin for jQuery: https://github.com/magnusjt/fol
 
 ### Install
 ````
-npm install https://github.com/magnusjt/react-folderselect
+npm install git://github.com/magnusjt/react-folderselect
 ````
 
 ### Import
@@ -28,6 +28,26 @@ import {FolderSelect, flatten} from 'react-folderselect'
 CSS:
 ````
 <link rel="stylesheet" href="path/to/react-folderselect/lib/folderselect.css">
+````
+
+LESS:
+````
+@import "node_modules/react-folderselect/src/folderselect.less";
+
+/* Some variables to modify*/
+@rfsBgColor:          #333;
+@rfsBorderColor:      #cfcfcf;
+@rfsBorderColorMuted: #888;
+@rfsTextColor:        #cfcfcf;
+@rfsTextColorMuted:   #888;
+@rfsIconItemColor:    #e7540a;
+@rfsIconFolderColor:  #ee974a;
+@rfsIconSpinnerColor: #e7540a;
+@rfsIconSearchColor:  #ee974a;
+@rfsMinColHeight:     300px;
+@rfsMaxColHeight:     300px;
+@rfsMinColWidth:      200px;
+@rfsMaxColWidth:      none;
 ````
 
 ### FolderSelect props

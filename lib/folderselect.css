@@ -1,0 +1,136 @@
+/*
+General styling
+*/
+.rfs {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.428571429;
+  background-color: #333;
+  color: #cfcfcf;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.rfs *,
+.rfs *:before,
+.rfs *:after {
+  box-sizing: border-box;
+}
+/*
+Styles for breadcrumbs bar
+*/
+.rfs-breadcrumbs-bar {
+  border-bottom: 1px solid #cfcfcf;
+}
+.rfs-breadcrumbs-bar .rfs-breadcrumb {
+  box-sizing: content-box;
+  padding: 4px;
+  border-right: 1px solid #cfcfcf;
+}
+.rfs-breadcrumbs-bar .rfs-breadcrumb:first-child {
+  padding-left: 1px;
+}
+.rfs-breadcrumbs-bar .rfs-breadcrumb:last-child {
+  border-right: none;
+}
+.rfs-breadcrumbs-bar .rfs-breadcrumb:hover {
+  cursor: pointer;
+  color: #333;
+  background: linear-gradient(to bottom, #fff 50%, #eee 100%);
+}
+/*
+Layoyt for the two pieces: the selector and the selected
+*/
+.rfs-row {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.rfs-col {
+  min-height: 300px;
+  max-height: 300px;
+  min-width: 200px;
+  max-width: none;
+  border-right: 1px solid #cfcfcf;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.rfs-col:last-child {
+  border-right: none;
+}
+/*
+Style for the spinner that shows up when loading data
+*/
+.rfs-spinner {
+  padding: 1px;
+}
+.rfs-spinner .rfs-icon {
+  color: #e7540a;
+}
+/*
+Style for the search bar
+*/
+.rfs-search {
+  position: relative;
+  border-bottom: 1px solid #cfcfcf;
+}
+.rfs-search input {
+  width: 90%;
+  border: 0;
+  margin: 0;
+  padding: 1px;
+  background-color: #333;
+  color: #cfcfcf;
+  outline: none;
+  border: none;
+}
+.rfs-search .rfs-icon-search-wrap {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+.rfs-search .rfs-icon {
+  color: #ee974a;
+}
+/*
+Styles for the nodes
+*/
+.rfs-node {
+  padding: 1px;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+.rfs-node.rfs-node-folder:hover,
+.rfs-node.rfs-node-folder-selected:hover,
+.rfs-node.rfs-node-item:hover,
+.rfs-node.rfs-node-item-selected:hover {
+  cursor: pointer;
+  color: #333;
+  background: linear-gradient(to bottom, #fff 50%, #eee 100%);
+}
+.rfs-node.rfs-node-folder .rfs-icon {
+  color: #ee974a;
+}
+.rfs-node.rfs-node-folder-selected {
+  padding: 1px 1px 0;
+  border-bottom: 1px #888 inset;
+  font-style: italic;
+  color: #888;
+}
+.rfs-node.rfs-node-folder-selected .rfs-icon {
+  color: #888;
+}
+.rfs-node.rfs-node-item .rfs-icon,
+.rfs-node.rfs-node-item-selected .rfs-icon {
+  color: #e7540a;
+}
+.rfs-node.rfs-node-item-disabled {
+  color: #888;
+}
+
+/*# sourceMappingURL=folderselect.css.map */
