@@ -1,0 +1,29 @@
+{
+  "name": "react-folderselect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/react-folderselect.js",
+  "scripts": {
+    "deps": "npm install && npm install -g webpack && npm install -g gulp",
+    "build": "gulp build && webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Magnus Jeffs Tovslid",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "react": "^0.13.3",
+    "lodash": "^3.10.1"
+  }
+}

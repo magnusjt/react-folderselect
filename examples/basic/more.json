@@ -1,0 +1,33 @@
+[
+  {
+    "text": "Loaded folder",
+    "expandable": true
+  },
+  {
+    "text": "Loaded 1"
+  },
+  {
+    "text": "Loaded 2"
+  },
+  {
+    "text": "Loaded 3"
+  },
+  {
+    "text": "Loaded 4"
+  },
+  {
+    "text": "Loaded 5"
+  },
+  {
+    "text": "Another folder",
+    "expandable": true,
+    "children": [
+      {
+        "text": "Inside 1"
+      },
+      {
+        "text": "Inside 2"
+      }
+    ]
+  }
+]

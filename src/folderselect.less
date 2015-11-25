@@ -1,0 +1,171 @@
+@rfsBgColor:          #333;
+@rfsBorderColor:      #cfcfcf;
+@rfsBorderColorMuted: #888;
+@rfsTextColor:        #cfcfcf;
+@rfsTextColorMuted:   #888;
+@rfsIconItemColor:    #e7540a;
+@rfsIconFolderColor:  #ee974a;
+@rfsIconSpinnerColor: #e7540a;
+@rfsIconSearchColor:  #ee974a;
+@rfsMinColHeight:     300px;
+@rfsMaxColHeight:     300px;
+@rfsMinColWidth:      200px;
+@rfsMaxColWidth:      none;
+
+/*
+General styling
+*/
+.rfs{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.428571429;
+  background-color: @rfsBgColor;
+  color: @rfsTextColor;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.rfs *,
+.rfs *:before,
+.rfs *:after{
+  box-sizing: border-box;
+}
+
+/*
+Styles for breadcrumbs bar
+*/
+.rfs-breadcrumbs-bar{
+  border-bottom: 1px solid @rfsBorderColor;
+
+  .rfs-breadcrumb{
+    box-sizing: content-box; // So the padding goes outside the box
+    padding: 4px;
+    border-right: 1px solid @rfsBorderColor;
+
+    &:first-child{
+      padding-left: 1px;
+    }
+    &:last-child{
+      border-right: none;
+    }
+
+    &:hover{
+      cursor: pointer;
+      color: #333;
+      background: linear-gradient(to bottom, #fff 50%, #eee 100%);
+    }
+  }
+}
+
+/*
+Layoyt for the two pieces: the selector and the selected
+*/
+.rfs-row{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.rfs-col{
+  min-height: @rfsMinColHeight;
+  max-height: @rfsMaxColHeight;
+  min-width: @rfsMinColWidth;
+  max-width: @rfsMaxColWidth;
+
+  border-right: 1px solid @rfsBorderColor;
+
+  &:last-child{
+    border-right: none;
+  }
+
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/*
+Style for the spinner that shows up when loading data
+*/
+.rfs-spinner{
+  padding: 1px;
+
+  .rfs-icon{
+    color: @rfsIconSpinnerColor;
+  }
+}
+
+/*
+Style for the search bar
+*/
+.rfs-search{
+  position: relative;
+  border-bottom: 1px solid @rfsBorderColor;
+
+  input{
+    width: 90%;
+    border: 0;
+    margin: 0;
+    padding: 1px;
+    background-color: @rfsBgColor;
+    color: @rfsTextColor;
+    outline: none;
+    border: none;
+  }
+
+  .rfs-icon-search-wrap{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+  }
+
+  .rfs-icon{
+    color: @rfsIconSearchColor;
+  }
+}
+
+/*
+Styles for the nodes
+*/
+.rfs-node{
+  padding: 1px;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+
+  &.rfs-node-folder,
+  &.rfs-node-folder-selected,
+  &.rfs-node-item,
+  &.rfs-node-item-selected{
+    &:hover{
+      cursor: pointer;
+      color: #333;
+      background: linear-gradient(to bottom, #fff 50%, #eee 100%);
+    }
+  }
+  &.rfs-node-folder{
+    .rfs-icon{
+      color: @rfsIconFolderColor;
+    }
+  }
+  &.rfs-node-folder-selected{
+    padding: 1px 1px 0;
+    border-bottom: 1px @rfsBorderColorMuted inset;
+    font-style: italic;
+    color: @rfsTextColorMuted;
+
+    .rfs-icon{
+      color: @rfsTextColorMuted;
+    }
+  }
+  &.rfs-node-item,
+  &.rfs-node-item-selected{
+    .rfs-icon{
+      color: @rfsIconItemColor;
+    }
+  }
+  &.rfs-node-item-disabled{
+    color: @rfsTextColorMuted;
+  }
+}
